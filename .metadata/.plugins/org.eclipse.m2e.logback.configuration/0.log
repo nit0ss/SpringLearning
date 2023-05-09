@@ -1,0 +1,10 @@
+2023-05-09 19:36:49,627 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-09 19:42:25,087 [Worker-8: Creating project "solido"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cst:solido:0.0.1-SNAPSHOT @ G:\Mi unidad\01 - MAIN\Cursos\Curso Java EE\SpringLearning\solido\pom.xml.
+2023-05-09 19:42:26,156 [Worker-8: Creating project "solido"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /solido/src/main/java
+2023-05-09 19:42:26,159 [Worker-8: Creating project "solido"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /solido/src/main/resources
+2023-05-09 19:42:26,161 [Worker-8: Creating project "solido"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /solido/src/test/java
+2023-05-09 19:42:26,162 [Worker-8: Creating project "solido"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /solido/src/test/resources
+2023-05-09 19:42:28,113 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-09 19:42:28,188 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-05-09 19:42:28,194 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-09 19:42:28,211 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
