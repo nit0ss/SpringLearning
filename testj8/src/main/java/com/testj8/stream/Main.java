@@ -22,6 +22,16 @@ public class Main {
 
 		List<String> lista = Arrays.asList("Mitchum", "Delon", "Belmondo", "Affleck", "De Niro", "Al Pacino", "Daniel Craig", "Torrente", "Nuria Espert", "Wayne", "Darin", "Depardieu");
 		
+		List<Integer> numerosInt = Arrays.asList(1, 2, 3, 7, 8, 32, 55, 87, 11, 15);
+		
+		
+		System.out.println("-------- Impares ---------");
+		List<Integer> numerosImpares = numerosInt.stream().filter(g -> (g % 2) != 0).collect(Collectors.toList());
+		numerosImpares.forEach(System.out::println);
+		
+		
+		
+		
 		System.out.println("-------- Empieza Por T ---------");
 		lista.stream().filter(actor -> actor.startsWith("T")).collect(Collectors.toList()).forEach(System.out::println);;
 		System.out.println("-------- Tiene U ---------");
@@ -35,8 +45,10 @@ public class Main {
                 .sorted().collect(Collectors.toList());
 		
 		actoresFiltrados.forEach(System.out::println);
-
-
+		
+		
+		
+		
 		
 		
 		// cursoMuchosVideos1.forEach(curso -> System.out.println("Duracion +5h =>" +
@@ -51,6 +63,33 @@ public class Main {
 		System.out.println("---------------------------------");
 		IntStream.range(0, cursoLista.size()).boxed()
 				.map(i -> "(Duracion +5h) Encontrado!! : " + i + "-" + cursoLista.get(i)).forEach(System.out::println);
+		
+		System.out.println("-------- Una X delante si tienen e ---------");
+		
+		List<String> actoresTransformados1 = lista.stream()
+				.map(f -> f.contains("e") ? "x "+f : f)
+                .collect(Collectors.toList());
+
+		actoresTransformados1.forEach(System.out::println);
+
+		System.out.println("-------- Sustituir X ---------");
+		List<String> actoresTransformados = lista.stream()
+				.map(actor -> actor.replace("e", "x"))
+                .collect(Collectors.toList());
+
+		actoresTransformados.forEach(System.out::println);
+		
+
+		System.out.println("---------------");
+		String einstein = "La imaginación es más importante que el conocimiento";
+		//int count = Arrays.stream(einstein.split("\\s+")).filter(word -> word.startsWith("i")).mapToInt(word -> 1).sum();
+		int count = (int) Arrays.stream(einstein.split("\\s+")).filter(word -> word.startsWith("i")).count();
+		System.out.println("\n La imaginación es más importante que el conocimiento \n");
+		System.out.println("Empieza por i: " + count);
+		System.out.println("---------------");
+		
+		
+		
 
 	}
 
