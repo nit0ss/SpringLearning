@@ -1,1 +1,4 @@
 INDEX VERSION 1.131+G:\Mi unidad\01 - MAIN\Cursos\Curso Java EE\SpringLearning\.metadata\.plugins\org.eclipse.jdt.core
+94873904.index
+1865797976.index
+622468890.index
