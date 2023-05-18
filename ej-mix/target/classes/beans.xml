@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+  
+    <bean id="direccion" class="com.cris.Direction">
+        <property name="direction" value="Leones" />
+        <property name="postal" value="34343" />
+        <property name="numero" value="13" />
+    </bean>
+    
+    
+    
+    
+</beans>

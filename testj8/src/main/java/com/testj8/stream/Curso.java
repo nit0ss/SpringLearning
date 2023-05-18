@@ -2,11 +2,11 @@ package com.testj8.stream;
 
 public class Curso {
 	private String titulo;
-	private float duracion; // Expresada en horas
+	private int duracion; // Expresada en horas
 	private int videos; // cantidad de vídeos
 	private int alumnos; // Cantidad de alumnos
 
-	public Curso(String titulo, float duracion, int videos, int alumnos) {
+	public Curso(String titulo, int duracion, int videos, int alumnos) {
 		this.titulo = titulo;
 		this.duracion = duracion;
 		this.videos = videos;
@@ -25,7 +25,7 @@ public class Curso {
 		return duracion;
 	}
 
-	public void setDuracion(float duracion) {
+	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
 
