@@ -1,0 +1,76 @@
+1)maven-archetype-webapp de apache
+2)añadir en pom:
+<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <spring.version>5.1.4.RELEASE</spring.version>
+    </properties>
+    <dependencies>
+        
+        
+        <!-- Dependencia de Servlet API -->
+    	<dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>javax.servlet-api</artifactId>
+       		 <version>4.0.1</version>
+        	<scope>provided</scope>
+    	</dependency>
+        
+        
+        
+        
+        
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+
+
+3)cree main/java y src/test/java
+4)borre la confdig de webapp.xml y cambie los facets  DynamicWebModule a 3.0
+5)cree webinitializer y extendy abrstact..
+6)importar los metodos
+7)en getservletmappings: return new String[] {"/"}:
+8)en getServletConfigClasses(): return new Class[] {SpringConfig.class};
+9)crear clase springconfig con: 
+	@Configuration 
+	@ComponentScan(basePackages="com.cris")
+	@EnableWebMvc
+	->Implements WebMvcConfigurer ->solo nos interesan los metodos de addResourceHandlers
+		->En el metodo addResourceHandlers pondermos: registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+		
+		
+		
+10)Crear un metodo que devuelva un viewresolver (es un @Bean) 
+en springconfig: InternalResourceViewResolver;
+	->Teoria de setprefix y suffix
+11)Hacer clases y controllers(HomeController en pack nuevo)
+	-> @Controller
+	->@RequestMapping("/")
+	returna el index.jsp cuando alguien hace una peticion al controlador
+12)Hacer JSP wen webapp/view
+
+	
+	
+	
+	

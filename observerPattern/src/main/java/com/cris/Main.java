@@ -9,6 +9,8 @@ public class Main {
 		Customer a = new Customer("Juan","Compra");
 		Customer b = new Customer("Pepe", "Ver");
 		
+		samsung.setAvailability("OutOfStock");
+		
 		samsung.addObserver(a);
 		samsung.addObserver(b);
 		samsung.notifyObservers();
