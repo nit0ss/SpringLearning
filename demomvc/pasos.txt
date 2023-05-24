@@ -70,7 +70,39 @@ en springconfig: InternalResourceViewResolver;
 	returna el index.jsp cuando alguien hace una peticion al controlador
 12)Hacer JSP wen webapp/view
 
+
+<---APIREST CONTROLLER PARA POSTMAN--->
+13)Agregar dependencia Jackson
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.13.0</version>
+</dependency>
+
+14)RestController
+@RequestMapping("/api")
+
+15)@Autowired
+    private ObjectMapper objectMapper
+16)Crear bean de ObjectMapper en SpringConfig
 	
-	
+	@Bean
+	public ObjectMapper objectMapper() {
+        return new ObjectMapper();
+    }
+		->>import com.fasterxml.jackson.databind.ObjectMapper;
+17)Crear el ApiRestController 
+18)Para POST: 
+
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		
+19) Crear en UserController un 	ResponseEntity<String> 
+	que retorne ResponseEntity.status(HttpStatus.CREATED)
+		
+		
 	
 	
